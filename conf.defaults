@@ -1,0 +1,28 @@
+# MINECRAFT SERVER LAUNCH CONFIGS
+# not to be confused with server.properties.
+
+# Server root directory
+SRVDIR=/minecraft
+
+# World directory (relative to SRVDIR)
+WORLD=world
+
+# Maximum RAM usage (change to suit your needs)
+MAXHEAP=2048M
+
+# Minimum RAM usage (change to suit your needs)
+MINHEAP=512M
+
+# Permsize
+PERMSIZE=256M
+
+# Number of concurrent garbage collection threads (no more than the number of logical processors in your system)
+GCTHREADS=2
+
+## Only change these if you know what you're doing
+
+# Server JAR file
+SERVERJAR=minecraft_server.jar
+
+# Extra custom JVM options
+JVM_OPTS='nogui'
