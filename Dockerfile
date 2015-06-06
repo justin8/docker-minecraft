@@ -1,7 +1,7 @@
 FROM justin8/archlinux
 MAINTAINER justin@dray.be
 
-RUN pacman -Syq --noprogressbar --noconfirm java-runtime-headless libcups fontconfig && pacman -Scc
+RUN pacman -Syq --noprogressbar --noconfirm java-runtime-headless libcups fontconfig && pacman -Scc --noconfirm
 
 # Placing a 'conf.override' file in the /minecraft mount will 
 # override any default settings. Missing settings will use defaults.
