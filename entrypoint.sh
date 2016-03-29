@@ -5,4 +5,4 @@
 
 cd /minecraft
 
-/usr/bin/java -Xmx${MAXHEAP} -Xms${MINHEAP} -XX:PermSize=${PERMSIZE} -XX:ParallelGCThreads=${GCTHREADS} -jar ${SRVDIR}/${SERVERJAR} ${JVM_OPTS}
+/usr/bin/java -Xmx${MAXHEAP} -Xms${MINHEAP} -XX:ParallelGCThreads=${GCTHREADS} -jar ${SRVDIR}/${SERVERJAR} ${JVM_OPTS}
