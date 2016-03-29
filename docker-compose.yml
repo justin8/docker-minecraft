@@ -2,7 +2,7 @@ version: '2'
 
 services:
     mc:
-        build: .
+        build: ./docker
         ports:
             - "25565:25565"
         volumes:
