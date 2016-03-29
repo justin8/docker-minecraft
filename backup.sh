@@ -1,10 +1,11 @@
 #!/bin/bash
+# Based on 15 minutely backups
+MAX_BACKUPS=$((60/15 * 24 * 7))
 BACKUP=$(date +%Y-%m-%d_%H:%M)
 INC=''
 BACKUP_PREVIOUS=''
-# Based on 15 minutely backups
-MAX_BACKUPS=$((60/15 * 24 * 7))
 cd "$(dirname "$(readlink -f "$0")")"
+mkdir -p backups
 
 set_rsync_opts() {
 	BACKUP_PREVIOUS=$(find backups -maxdepth 1 | sort -n | tail -1)
