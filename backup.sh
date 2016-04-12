@@ -1,6 +1,6 @@
 #!/bin/bash
 # Based on 15 minutely backups
-MAX_BACKUPS=$((60/15 * 24 * 7))
+MAX_BACKUPS=$((60/15 * 24 * 2))
 BACKUP=$(date +%Y-%m-%d_%H:%M)
 INC=''
 BACKUP_PREVIOUS=''
@@ -23,7 +23,7 @@ cleanup() {
 	BACKUPS_TO_REMOVE="$(echo "$ALL_BACKUPS" | tail -n +$MAX_BACKUPS)"
 
 	for i in $BACKUPS_TO_REMOVE; do
-		echo rm -rf $BACKUPS_TO_REMOVE
+		rm -rf $BACKUPS_TO_REMOVE
 	done
 }
 
