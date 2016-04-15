@@ -19,7 +19,7 @@ cleanup() {
 	local ALL_BACKUPS
 	local BACKUPS_TO_REMOVE
 
-	ALL_BACKUPS="$(find backups -maxdepth 1 | tail -n +2)"
+	ALL_BACKUPS="$(cd backups; ls -1t)"
 	BACKUPS_TO_REMOVE="$(echo "$ALL_BACKUPS" | tail -n +$MAX_BACKUPS)"
 
 	for i in $BACKUPS_TO_REMOVE; do
